@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>selector</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p>This is a paragraph.</p>
+<p id="test">This is another paragraph.</p>
+<p class="test1">This is a paragraph.</p>
+
+<button id="id1">Click me to hide paragraphs</button> <br/>
+<button id="id2">id2</button><br/>
+<button id="id3">id3</button><br/>
+<script>
+//document는 dom의 최상위 객체(html)
+//ready()는 ready이벤트를 처리하는 메서드로 ready이벤트는 onload이벤트임
+$(document).ready(function(){
+	$("#id1").click(function(){ //click이벤트를 처리하는 메서드
+		$("p").hide(); //hide()는 jquery제공 메서드로 감추는 메서드
+	});
+	
+	$("#id2").click(function(){
+		$("#test").hide();
+	});
+	
+	$("#id3").click(function(){
+		$(".test1").hide();
+	});
+	
+	$("button").click(function(){
+	    $(this).hide(); //이벤트를 일으킨 버튼만 나타냄(현재의 엘리먼트)
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jquery CDN이용</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- jquery라이브러리를 구글 CDN으로 연결 -->
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Click me</button>
+
+<script>
+$(document).ready(function(){  
+	$("button").click(function(){
+		$("p").hide();
+	});
+});
+</script>
+</body>
+</html>
